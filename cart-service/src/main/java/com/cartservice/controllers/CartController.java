@@ -1,0 +1,52 @@
+package com.cartservice.controllers;
+
+import java.util.List;
+
+import javax.websocket.server.PathParam;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cartservice.entities.Cart;
+import com.cartservice.service.CartService;
+
+@RestController
+@RequestMapping("/cart")
+public class CartController {
+
+	@Autowired
+	private CartService cartService;
+	
+	@GetMapping
+	public ResponseEntity<List<Cart>> getAll() {
+		List<Cart> carts = this.cartService.getAll();
+		return ResponseEntity.ok(carts);
+	}
+	
+	@GetMapping("/{id}")
+	public ResponseEntity<Cart> getById(@PathVariable("id") int id) {
+		Cart cart = this.cartService.getCartById(id);
+		if(cart == null) {
+			ResponseEntity.notFound();
+		}
+		return ResponseEntity.ok(cart);
+	}
+	
+	@PostMapping
+	public ResponseEntity<Cart> save(@RequestBody Cart cart) {
+		Cart newCart = this.cartService.save(cart);
+		return ResponseEntity.ok(newCart);
+	}
+	
+	@GetMapping("/user/{id}")
+	public ResponseEntity<List<Cart>>getByUserId(@PathVariable("id") int id) {
+		List<Cart> carts = this.cartService.getCartsByUserId(id);
+		return ResponseEntity.ok(carts);
+	}
+}

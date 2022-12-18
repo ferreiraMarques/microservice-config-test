@@ -1,0 +1,5 @@
+package com.userservice.userservice.feignClients;
+
+public interface CartFeignClient {
+
+}

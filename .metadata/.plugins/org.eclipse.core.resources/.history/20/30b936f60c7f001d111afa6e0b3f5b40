@@ -1,0 +1,28 @@
+package com.userservice.userservice.configuration.models;
+
+public class Byke {
+
+	private String brand;
+	private String model;
+
+	public Byke() {
+
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+}

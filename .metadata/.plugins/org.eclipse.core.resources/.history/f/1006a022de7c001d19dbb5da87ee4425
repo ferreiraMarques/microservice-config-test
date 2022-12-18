@@ -1,0 +1,5 @@
+package com.userservice.userservice.configuration.models;
+
+public class Cart {
+
+}

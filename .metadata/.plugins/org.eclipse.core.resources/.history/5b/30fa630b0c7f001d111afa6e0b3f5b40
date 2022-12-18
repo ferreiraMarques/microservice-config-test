@@ -1,0 +1,10 @@
+package com.userservice.userservice.feignClients;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@FeignClient(name = "byke-service", path = "http://localhost:8003")
+@RequestMapping("/byke")
+public class BykeFeignClient {
+
+}
