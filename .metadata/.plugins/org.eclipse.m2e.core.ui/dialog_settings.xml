@@ -2,6 +2,8 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="D:\workspace\j_workspace\microservices-example\gateway-service"/>
+			<item value="D:\workspace\j_workspace\microservices-example\eureka-service"/>
 			<item value="D:\workspace\j_workspace\microservices-example\config-service"/>
 			<item value="D:\workspace\j_workspace\microservices-example\moto-service"/>
 			<item value="D:\workspace\j_workspace\microservices-example\cart-service"/>

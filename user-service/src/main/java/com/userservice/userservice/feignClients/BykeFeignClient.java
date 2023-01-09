@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.userservice.userservice.configuration.models.Byke;
 
-@FeignClient(name = "byke-service", path = "http://localhost:8003")
+@FeignClient(name = "byke-service")
 @RequestMapping("/byke")
 public interface BykeFeignClient {
 

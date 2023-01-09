@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.userservice.userservice.configuration.models.Cart;
 
-@FeignClient(name = "cart-service", url = "http://localhost:8002")
+@FeignClient(name = "cart-service")
 @RequestMapping("/cart")
 public interface CartFeignClient {
 	
