@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git: 
-          defaul-label: config-server
+          defaul-label: eureka
           uri: https://github.com/ferreiraMarques/microservice-config-test
           search-paths: config-data
           
